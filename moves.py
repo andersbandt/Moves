@@ -10,16 +10,16 @@ class Move():
         self.money = money
 
     def isTime(time):
-    if (end - time > 0):
-        if (end > time and start < time):
-            return true
+        if (end - time > 0):
+            if (end > time and start < time):
+                return true
 #tests to see if there is no required time            
-    elif (end == 0 and start == 0):
+        elif (end == 0 and start == 0):
             return true
-    else:
-        if (time < move.end or time > move.start):
-            return true
-    return false
+        else:
+            if (time < move.end or time > move.start):
+                return true
+        return false
 
 
         
@@ -39,13 +39,16 @@ rockets.append(Move("Movie", 0, 0, "A", 13))
 
 realities = []
 
-sort = raw_input("What do you want to sort by; time, location, date, money, or multiple?)
-if (sort = "time"):
+sort = raw_input("What do you want to sort by; time, location, date, money, or multiple?")
+if (sort == "time"):
                  answer_time = input("What is the time?")
                  for move in rockets:
-                 if move.isTime(answer_time) == true:
-                    realities.append(move)
+                    if (move.isTime(answer_time) == true):
+                        realities.append(move)
                  
 #prints all of the possibilities
 for move in realities:
     print(move.name)
+
+
+
