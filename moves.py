@@ -38,7 +38,7 @@ class Move():
         else:
             return false
         
-   def isDay(day):
+    def isDay(day):
         if (self.day == 1):
             return true
         if (self.day == day):
@@ -61,7 +61,7 @@ rockets.append(Move("Bike Ride", 8, 19, "A", 0,1))
 rockets.append(Move("Stone Arch Bridge Festival", 0, 0, "Minneapolis", 10, "6/15"))
 rockets.append(Move("Stone Arch Bridge Festival", 0, 0, "Minneapolis", 10, "6/16"))
 rockets.append(Move("Stone Arch Bridge Festival", 0, 0, "Minneapolis", 10, "6/17"))
-rockets.append(Move("Movie", 0, 0, "A", 13))
+rockets.append(Move("Movie", 0, 0, "A", 13, 1))
 rockets.append(Move("Rozies' House", 0, 0, "Shoreview", 0,1))
 rockets.append(Move("Ders' House", 0, 0, "Shoreview", 0,1))
 rockets.append(Move("Luke's House", 0, 0, "Shoreview", 0,1))
@@ -73,12 +73,12 @@ rockets.append(Move("Minneapolis Institute of Art", 11, 17, "Minneapolis", 0,"Su
 realities = []
 
 print("Please enter the following: time, location, date, money")
-answer_time = input("What is the time?")
-answer_location = input("What is the time?")
-answer_date = input("What is the time?")
-answer_money = input("What is the time?")
+answer_time = input("What is the time? ")
+answer_location = input("What is the location? ")
+answer_date = input("What is the date? ")
+answer_money = input("How much money? ")
 for move in rockets:
-    if (move.isTime(answer_time) == true and move.isLocation(answer)location and move.isMoney(answer_money) == money):
+    if ((move.isTime(answer_time) == true) and (move.isLocation(answer_location) == true) and (move.isMoney(answer_money) == money)):
         realities.append(move)
     
 #prints all of the possibilities
